@@ -7,16 +7,25 @@ Review the pseudocode then trace the algorithm by stepping through the process w
 
 Once you are done with your article, code a working, tested implementation of Insertion Sort based on the pseudocode provided.
 
-## Whiteboard Process
-![Whiteboard](assets/Insertion%20Sort%20(1).png)
+## Visual Process
+![Whiteboard](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+
+[Click here for reference](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMerge_sort&psig=AOvVaw3KstEWCqadB5Esd38VkvUu&ust=1621732962995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICUiZ6Q3PACFQAAAAAdAAAAABAJ)
+
+
+## Whiteboard
+![](assets/Merge%20Sort.png)
 
 ## Approach & Efficiency
 
-Time: 0(n^2)
-Space: 0(n)
+Sort arrays by splitting arrays
+
+Time Complexity: 0(n log n)
+
 
 ## Solution
 [Link to the code](https://github.com/ClementBuchanan/InsertionSort/blob/main/index.js)
+
 
 ## blog article
 
