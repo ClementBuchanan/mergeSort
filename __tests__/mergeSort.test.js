@@ -1,11 +1,12 @@
 'use strict';
-const inserstionSort = require('../index.js');
+const mergeSort = require('../index.js');
+const merge = require('../index.js');
 
-describe('should test insertion arrays', () => {
-  it('should test inserstion sort fucntion', () => {
-    let inputArr = [8, 4, 23, 16, 42, 15];
-    inserstionSort(inputArr);
-    expect(inputArr).toEqual([4, 8, 15, 16, 23, 42]);
-    console.log(inputArr);
+describe('should test merge arrays', () => {
+  it('should test merge sort function', () => {
+    let mergeSortArr = [8, 4, 23, 16, 42, 15];
+    const mergedArray = mergeSort(mergeSortArr);
+    expect(mergedArray).toEqual([4, 8, 15, 16, 23, 42]);
+    console.log(mergedArray);
   });
 });

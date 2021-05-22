@@ -1,9 +1,8 @@
+'use strict';
 
-
-const mergeSoft = array => {
+const mergeSort = (array) => {
   if (array.length < 2) return array;
-  const middle = math.floor(array.length / 2);
-
+  const middle = Math.floor(array.length / 2);
   const leftSide = array.slice(0, middle);
   const rightSide = array.slice(middle, array.length);
 
@@ -13,14 +12,22 @@ const mergeSoft = array => {
 }
 
 const merge = (left, right) => {
+  const result = [];
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
+      result.push(left.shift());
+    } else {
       result.push(right.shift());
     }
   }
   while (left.length) result.push(left.shift());
-  console.log('result', result);
+  while (right.length) result.push(right.shift());
+
+  console.log('result:', result);
   return result;
 }
 
-console.log(mergeSort([8, 4, 23, 42, 15, 16]));
+// console.log(mergeSort([8, 4, 23, 42, 15, 16]));
+
+module.exports = mergeSort;
+

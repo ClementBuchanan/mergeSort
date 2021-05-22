@@ -7,23 +7,35 @@ Review the pseudocode then trace the algorithm by stepping through the process w
 
 Once you are done with your article, code a working, tested implementation of Insertion Sort based on the pseudocode provided.
 
-## Whiteboard Process
-![Whiteboard](assets/Insertion%20Sort%20(1).png)
+## Visual Process
+![Whiteboard](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+
+[Click here for reference](https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMerge_sort&psig=AOvVaw3KstEWCqadB5Esd38VkvUu&ust=1621732962995000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCICUiZ6Q3PACFQAAAAAdAAAAABAJ)
+
+
+## Whiteboard
+![](assets/Merge%20Sort.png)
 
 ## Approach & Efficiency
 
-Time: 0(n^2)
-Space: 0(n)
+Sort arrays by splitting arrays
+
+Time Complexity: 0(n log n)
+
 
 ## Solution
 [Link to the code](https://github.com/ClementBuchanan/InsertionSort/blob/main/index.js)
 
+
 ## blog article
 
-1. To create an insertion sort you must first loop through the array minus the base value
-2. Next we loop through the entire array for comarison
-3. Then do a console.log('outer', array[1])
-4. Then check if the valus is less than the current index then console.log ('inner', array[j]).
-5. If so then we store the it in a temp variable removing it from the array.
-6. Again we console.log('temp', temp)
-7. Next we insert the VALUE into the current index after which we console.log('post-sort', array) and then we finally return the sorted array.
+1. We're first going to use two functions to get this job done.
+   1. A mergeSort
+   2. A merge
+2. In the mergeSort function we're going to ckeck if the array can be split. If it can then we find the middle index.
+3. We split the arrray into two sides (right and left sides) using recursion to continue splitting until we have single index array.
+4. In the merge function we create a new array and check if either the left side or right side arrays are empty.
+5. if either of them are not empty we will check for the smaller value in each
+   1. find the lower value between the two of them and based on that we will add the left of right value to the new array we created.
+6. After we will begin to merge the arrays beginning with t he left then the right.
+7. Ultimately we will return the sorted array. 
