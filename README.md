@@ -20,10 +20,13 @@ Space: 0(n)
 
 ## blog article
 
-1. To create an insertion sort you must first loop through the array minus the base value
-2. Next we loop through the entire array for comarison
-3. Then do a console.log('outer', array[1])
-4. Then check if the valus is less than the current index then console.log ('inner', array[j]).
-5. If so then we store the it in a temp variable removing it from the array.
-6. Again we console.log('temp', temp)
-7. Next we insert the VALUE into the current index after which we console.log('post-sort', array) and then we finally return the sorted array.
+1. We're first going to use two functions to get this job done.
+   1. A mergeSort
+   2. A merge
+2. In the mergeSort function we're going to ckeck if the array can be split. If it can then we find the middle index.
+3. We split the arrray into two sides (right and left sides) using recursion to continue splitting until we have single index array.
+4. In the merge function we create a new array and check if either the left side or right side arrays are empty.
+5. if either of them are not empty we will check for the smaller value in each
+   1. find the lower value between the two of them and based on that we will add the left of right value to the new array we created.
+6. After we will begin to merge the arrays beginning with t he left then the right.
+7. Ultimately we will return the sorted array. 
